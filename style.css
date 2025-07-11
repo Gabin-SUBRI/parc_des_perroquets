@@ -220,6 +220,202 @@ header h1 {
   margin-top: 2rem;
 }
 
+/*Groupe*/
+
+#infos-tarifs {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+#infos-tarifs h2 {
+  font-size: 2em;
+  color: #0e7c7b;
+  margin-bottom: 10px;
+}
+
+#infos-tarifs h3 {
+  color: #3aafa9;
+  margin-top: 30px;
+}
+
+#infos-tarifs p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#infos-tarifs ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+#infos-tarifs ul li {
+  margin-bottom: 10px;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+#infos-tarifs ul li::before {
+  content: "🦜";
+  position: absolute;
+  left: 0;
+}
+
+#infos-tarifs a {
+  color: #006d77;
+  text-decoration: none;
+}
+
+#infos-tarifs a:hover {
+  text-decoration: underline;
+}
+
+/*Refuge*/
+
+#refuge {
+  font-family: "Segoe UI", sans-serif;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #faf8f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+#refuge h2 {
+  font-size: 1.8em;
+  color: #c62828;
+  margin-bottom: 15px;
+}
+
+#refuge h3 {
+  font-size: 1.6em;
+  color: #00796b;
+  margin-top: 30px;
+}
+
+#refuge h4 {
+  font-size: 1.3em;
+  color: #37474f;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#refuge p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+#refuge ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+#refuge ul li {
+  margin-bottom: 12px;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+#refuge ul li::before {
+  content: "🪶";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#refuge a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#refuge a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  #refuge {
+    padding: 20px;
+  }
+
+  #refuge h2,
+  #refuge h3,
+  #refuge h4 {
+    font-size: 1.4em;
+  }
+}
+
+/*Contact*/
+
+#contact {
+  font-family: "Segoe UI", sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+#contact h2 {
+  font-size: 1.8em;
+  color: #1e88e5;
+  margin-bottom: 20px;
+}
+
+#contact h3 {
+  font-size: 1.4em;
+  color: #1565c0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+#contact ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#contact ul li {
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  #contact {
+    padding: 20px;
+  }
+
+  #contact h2,
+  #contact h3 {
+    font-size: 1.5em;
+  }
+}
+
 /* Responsive navigation */
 @media (max-width: 768px) {
   .main-nav ul {
