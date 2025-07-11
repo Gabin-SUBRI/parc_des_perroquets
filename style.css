@@ -800,6 +800,16 @@ th {
   color: var(--text);
 }
 
+.photo-grand-format {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
   .oiseaux-section {
     padding: 2rem 1rem;
