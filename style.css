@@ -1,6 +1,7 @@
 :root {
   --primary: #2c7a7b;
   --accent: #f6ad55;
+  --orange-title: #e67e22; /* Couleur orange pour les titres */
   --bg: #f0f4f8;
   --text: #2d3748;
 }
@@ -106,43 +107,223 @@ header h1 {
   right: 0;
 }
 
-/*Info*/
-.offre-famille {
-  background: #fef9f3;
-  border-left: 6px solid var(--accent, #2c7a7b);
-  padding: 2rem 1.5rem;
-  margin: 2rem auto;
-  max-width: 700px;
+/* Styles harmonisés pour tous les titres principaux */
+main h2,
+.info h2,
+.offre-famille h2,
+.presentation-parc h2,
+#infos-tarifs h2,
+#refuge h2,
+#contact h2 {
+  color: var(--orange-title) !important;
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem) !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+/* Styles harmonisés pour les sous-titres */
+main h3,
+.info h3,
+.offre-famille h3,
+.presentation-parc h3,
+#infos-tarifs h3,
+#refuge h3,
+#contact h3 {
+  color: var(--primary) !important;
+  font-size: clamp(1.2rem, 3vw, 1.4rem) !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.8rem !important;
+  font-weight: 500 !important;
+}
+
+/* Styles harmonisés pour les h4 */
+main h4,
+.info h4,
+.offre-famille h4,
+.presentation-parc h4,
+#infos-tarifs h4,
+#refuge h4,
+#contact h4 {
+  color: var(--text) !important;
+  font-size: clamp(1rem, 2.5vw, 1.2rem) !important;
+  margin-top: 1.2rem !important;
+  margin-bottom: 0.6rem !important;
+  font-weight: 500 !important;
+}
+
+/* Conteneur principal harmonisé */
+main {
+  padding: clamp(1rem, 4vw, 2rem) clamp(0.5rem, 3vw, 1rem);
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+}
+
+/* Styles harmonisés pour toutes les sections */
+.info,
+.offre-famille,
+.presentation-parc,
+#infos-tarifs,
+#refuge,
+#contact {
+  background: white;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  border-left: 5px solid var(--orange-title);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
   font-family: "Segoe UI", sans-serif;
 }
 
-.offre-famille h2 {
-  color: var(--accent, #2c7a7b);
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-.offre-famille p {
-  font-size: 1rem;
+/* Styles harmonisés pour tous les paragraphes */
+.info p,
+.offre-famille p,
+.presentation-parc p,
+#infos-tarifs p,
+#refuge p,
+#contact p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-.offre-famille ol {
+/* Styles harmonisés pour toutes les listes */
+.info ul,
+.offre-famille ul,
+.presentation-parc ul,
+#infos-tarifs ul,
+#refuge ul,
+#contact ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.info ul li,
+.offre-famille ul li,
+.presentation-parc ul li,
+#infos-tarifs ul li,
+#refuge ul li,
+#contact ul li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.6;
+}
+
+/* Puces personnalisées pour chaque section */
+.info ul li::before {
+  content: "🦜";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.offre-famille ul li::before {
+  content: "🎟️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.presentation-parc ul li::before {
+  content: "🌟";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#infos-tarifs ul li::before {
+  content: "🦜";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#refuge ul li::before {
+  content: "🪶";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#contact ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+#contact ul li::before {
+  content: none;
+}
+
+/* Styles harmonisés pour les listes ordonnées */
+.info ol,
+.offre-famille ol,
+.presentation-parc ol,
+#infos-tarifs ol,
+#refuge ol,
+#contact ol {
   padding-left: 1.2rem;
   margin-bottom: 1rem;
 }
 
-.offre-famille ol li {
+.info ol li,
+.offre-famille ol li,
+.presentation-parc ol li,
+#infos-tarifs ol li,
+#refuge ol li,
+#contact ol li {
   margin-bottom: 0.5rem;
+  padding-left: 0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.6;
 }
 
-.offre-famille .conditions {
+/* Styles harmonisés pour les liens */
+.info a,
+.offre-famille a,
+.presentation-parc a,
+#infos-tarifs a,
+#refuge a,
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info a:hover,
+.offre-famille a:hover,
+.presentation-parc a:hover,
+#infos-tarifs a:hover,
+#refuge a:hover,
+#contact a:hover {
+  text-decoration: underline;
+  color: var(--orange-title);
+}
+
+/* Styles spécifiques conservés */
+.note {
+  font-style: italic;
+  color: #555;
+}
+
+.conditions {
   font-size: 0.9rem;
   color: #a94442;
   font-style: italic;
+}
+
+.highlight {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--orange-title);
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .brochure-image {
@@ -160,260 +341,177 @@ header h1 {
 .brochure-image a {
   display: inline-block;
   margin-top: 0.8rem;
-  color: var(--accent, #2c7a7b);
+  color: var(--orange-title);
   font-weight: bold;
   text-decoration: none;
 }
 
-.brochure-image a:hover {
-  text-decoration: underline;
+/* Styles pour les tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
 }
 
-/*Parc*/
-.presentation-parc {
-  background: #f0f9f9;
-  padding: 2rem 1.5rem;
-  margin: 3rem auto;
-  max-width: 900px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.7;
+table thead,
+table tbody {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
-.presentation-parc h2 {
-  color: var(--accent, #2c7a7b);
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  text-align: center;
+th,
+td {
+  border: 1px solid #ccc;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+  text-align: left;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
-.presentation-parc p {
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
+th {
+  background: var(--orange-title);
+  color: white;
+  font-weight: 600;
 }
 
-.presentation-parc ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 1rem 0;
-}
-
-.presentation-parc ul li {
-  margin-bottom: 0.8rem;
-  padding-left: 1.2rem;
-  position: relative;
-}
-
-.presentation-parc ul li::before {
-  content: "🟢";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-}
-
-.presentation-parc .highlight {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #d35400;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-/*Groupe*/
-
-#infos-tarifs {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fdfdfd;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
-}
-
-#infos-tarifs h2 {
-  font-size: 2em;
-  color: #0e7c7b;
-  margin-bottom: 10px;
-}
-
-#infos-tarifs h3 {
-  color: #3aafa9;
-  margin-top: 30px;
-}
-
-#infos-tarifs p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-#infos-tarifs ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-#infos-tarifs ul li {
-  margin-bottom: 10px;
-  padding-left: 1.2em;
-  position: relative;
-}
-
-#infos-tarifs ul li::before {
-  content: "🦜";
-  position: absolute;
-  left: 0;
-}
-
-#infos-tarifs a {
-  color: #006d77;
-  text-decoration: none;
-}
-
-#infos-tarifs a:hover {
-  text-decoration: underline;
-}
-
-/*Refuge*/
-
-#refuge {
-  font-family: "Segoe UI", sans-serif;
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #faf8f5;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-  color: #333;
-}
-
-#refuge h2 {
-  font-size: 1.8em;
-  color: #c62828;
-  margin-bottom: 15px;
-}
-
-#refuge h3 {
-  font-size: 1.6em;
-  color: #00796b;
-  margin-top: 30px;
-}
-
-#refuge h4 {
-  font-size: 1.3em;
-  color: #37474f;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-#refuge p {
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-#refuge ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-#refuge ul li {
-  margin-bottom: 12px;
-  padding-left: 1.5em;
-  position: relative;
-}
-
-#refuge ul li::before {
-  content: "🪶";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-#refuge a {
-  color: #1565c0;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#refuge a:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 600px) {
-  #refuge {
-    padding: 20px;
+/* Responsive navigation */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 
-  #refuge h2,
-  #refuge h3,
-  #refuge h4 {
-    font-size: 1.4em;
+  .main-nav a {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav a.facebook {
+    border-radius: 0;
   }
 }
 
-/*Contact*/
+@media (max-width: 480px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-#contact {
-  font-family: "Segoe UI", sans-serif;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 25px;
-  background-color: #f0f8ff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  color: #333;
+  .main-nav a {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.8rem;
+  }
 }
 
-#contact h2 {
-  font-size: 1.8em;
-  color: #1e88e5;
-  margin-bottom: 20px;
+/* Responsive table */
+@media (max-width: 600px) {
+  table {
+    font-size: 0.75rem;
+  }
+
+  th,
+  td {
+    padding: 0.4rem 0.3rem;
+  }
 }
 
-#contact h3 {
-  font-size: 1.4em;
-  color: #1565c0;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
+@media (max-width: 480px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-#contact p {
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
+  table {
+    white-space: normal;
+  }
 
-#contact ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
 
-#contact ul li {
-  margin-bottom: 10px;
-}
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 4px;
+  }
 
-#contact a {
-  color: #0d47a1;
-  text-decoration: none;
-  font-weight: bold;
-}
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50% !important;
+    text-align: left;
+  }
 
-#contact a:hover {
-  text-decoration: underline;
-}
+  td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: var(--primary);
+  }
 
-@media screen and (max-width: 600px) {
+  /* Améliorer les sections sur mobile */
+  .info,
+  .offre-famille,
+  .presentation-parc,
+  #infos-tarifs,
+  #refuge,
   #contact {
-    padding: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
 
-  #contact h2,
-  #contact h3 {
-    font-size: 1.5em;
+  .info ul,
+  .offre-famille ul,
+  .presentation-parc ul,
+  #infos-tarifs ul,
+  #refuge ul {
+    padding-left: 1rem;
   }
+
+  .info ul li,
+  .offre-famille ul li,
+  .presentation-parc ul li,
+  #infos-tarifs ul li,
+  #refuge ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+  }
+
+  /* Améliorer les cibles tactiles */
+  .main-nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  background: #e2e8f0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  margin-top: 2rem;
 }
 
 /* Responsive navigation */
@@ -511,6 +609,223 @@ th {
   background: var(--accent);
   color: white;
   font-weight: 600;
+}
+
+/*Oiseaux*/
+
+.oiseaux-section {
+  background: linear-gradient(135deg, #f0f9f9 0%, #e8f5f5 100%);
+  padding: 3rem 1.5rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.oiseaux-section h2 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.oiseaux-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.oiseaux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.oiseau-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.oiseau-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.oiseau-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.oiseau-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.oiseau-emoji {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.oiseau-header h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.oiseau-nom-scientifique {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.oiseau-description {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.oiseau-caracteristiques {
+  background: #f8fcfc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.oiseau-caracteristiques h4 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.caracteristique-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.caracteristique-item .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  opacity: 0.7;
+}
+
+.oiseau-specialites {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+.oiseau-specialites h4 {
+  color: #d35400;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.specialite-tag {
+  display: inline-block;
+  background: white;
+  color: var(--primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-box {
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 2rem 0;
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+}
+
+.highlight-box h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.highlight-box p {
+  margin: 0;
+  opacity: 0.9;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .oiseaux-section {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+  }
+
+  .oiseaux-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .oiseaux-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .oiseau-card {
+    padding: 1.2rem;
+  }
+
+  .oiseau-emoji {
+    font-size: 2rem;
+  }
+
+  .oiseau-header h3 {
+    font-size: 1.2rem;
+  }
 }
 
 /* Responsive table */
